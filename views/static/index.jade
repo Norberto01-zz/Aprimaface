@@ -1,0 +1,55 @@
+extends ../layout
+
+block body
+  #main-home(ng-app="SignupModule", ng-controller="SignupController", ng-cloak)
+    .container-fluid
+      nav.navbar.navbar-default.navbar-inverse
+        botton.navbar-toggle(type="button", data-toggle="collapse")
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        a.navbar-brand
+        .collapse.navbar-collapse
+          form.navbar-form.navbar-right
+            .form-group
+              input(class="form-control", placeholder="Email", name="email", type="text")
+            .form-group
+              input(class="form-control", placeholder="Password", name="password", type="password")
+            .form-group
+              button.btn.btn-success(type="submit")
+                span.sign-in.sign Sign in
+                span.sign-up.sign Signing up...
+              input(type="hidden", name="_csrf", value="{{ _csrf }}")
+      .container
+        .col-md-6.sign-form
+          form.form-signin(name="signup")#sign-up-form
+            h2.form-signin-heading Create an account
+            .row
+              .control-group.form-group.col-md-12
+                label Your full name
+                input.form-control(type='text', placeholder='Nikola Tesla', name='name', required)
+              .control-group.form-group.col-md-12
+                label Your Username
+                input.form-control(type='text', placeholder='nikola', name='title', required)
+              .control-group.form-group.col-md-12
+                label Your email address
+                input.form-control(type='email', placeholder='nikola@tesla.com', name='email', required)
+              .control-group.form-group.col-md-12
+                .col-md-6
+                  label Choose a password
+                  input#password.form-control(type='password', placeholder='at least 6 characters', name='password', required)
+                .col-md-6
+                  label Re-enter your password
+                  input.form-control(type='password', placeholder='one more time', name='confirmation', required)
+              .control-group.form-group.col-md-12
+                button.btn.btn-primary.btn-lg.btn-block(type='submit')
+                  span Create Account
+                  span.overlord-loading-spinner.fa.fa-spinner
+                  //span Preparing your new account...
+                input(type='hidden', name='_csrf', value='{{_csrf}}')
+        .container
+          footer.footer.pull-right
+            .footer Aprimaface
+
+
+

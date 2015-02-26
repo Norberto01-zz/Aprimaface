@@ -7,12 +7,20 @@ html
     meta(name="viewport",content="width=device-width, initial-scale=1, maximum-scale=1")
 
     block styles
+    link(rel="stylesheet", href="/styles/importer.css")
+    link(rel="stylesheet", href="/styles/bootstrap.css")
+    link(rel="stylesheet", href="/styles/custom.css")
 
   body
     block body
 
-    // The linker searches for this tag and adds js.  If there's no linker, we point to sails.io.js
     // SCRIPTS
     script(src="/js/dependencies/sails.io.js")
+    script(src="/js/dependencies/jquery-2.1.3.js")
+    script(src="/js/dependencies/angular.js")
+    script(src="/js/dependencies/bootstrap.min.js")
+    script(src="/js/dependencies/compareTo.js")
+    script(src="/js/dependencies/toastr.js")
+    script(src="/js/public/app/components/signup/SignupModule.js")
+    script(src="/js/public/app/components/signup/SignupController.js")
     // SCRIPTS END
-
