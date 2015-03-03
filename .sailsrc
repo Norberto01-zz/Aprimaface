@@ -1,5 +1,8 @@
 {
   "generators": {
-    "modules": {}
+    "modules": {
+        "frontend" : "sails-generate-frontend-angular",
+        "controller" : "sails-generate-controller-angular"
+    }
   }
 }

@@ -34,7 +34,18 @@ module.exports.routes = {
 
   '/': {
     view: 'static/index'
-  }
+  },
+  'post /user/new': 'UserController.new',
+  'post /user/create': 'UserController.create'
+  //'POST /user/new':{
+  //  controller: 'UserController',
+  //  action: 'new'
+  //},
+  //'POST /user/create':{
+  //  controller: 'UserController',
+  //  action: 'create'
+  //}
+
 
   /***************************************************************************
   *                                                                          *

@@ -6,9 +6,34 @@
 */
 
 module.exports = {
-
+  schema: true,
   attributes: {
-
+    name:{
+      type: 'string',
+      required: true
+    },
+    last_name:{
+      type: 'string'
+    },
+    username:{
+      type: 'string',
+      unique: true
+    },
+    email:{
+      type: 'string',
+      email: true,
+      required: true,
+      unique: true
+    },
+    encryptedPassword:{
+      type: 'string'
+    }
+    //,
+    //_csrf:{
+    //  type: 'string',
+    //  required: true,
+    //  unique: true
+    //}
   }
 };
 
