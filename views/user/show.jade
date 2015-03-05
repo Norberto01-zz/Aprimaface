@@ -1,0 +1,19 @@
+//
+   Created by root on 3/5/15.
+extends ../layout
+
+block body
+  #main-user-container
+    .container
+      .show-item
+        h1(class="title") #{user.name}
+        h3(class="title") #{user.username}
+        .contact
+          p #{user.email}
+      .actions
+         a(class="btn btn-small btn-primary" href="/user/edit/#{user.id}") Edit
+
+
+
+
+

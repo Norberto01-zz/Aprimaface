@@ -5,3 +5,8 @@
   float: initial;
   margin: 0 auto;
 }
+.sign-session{
+  margin: 0 auto;
+  float: initial;
+  overflow: hidden;
+}

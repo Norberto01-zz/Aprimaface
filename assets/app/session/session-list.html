@@ -1,0 +1,12 @@
+<h1>Sessions</h1>
+<ul>
+    <li ng-repeat="session in sessions">
+        <div>
+            <p ng-repeat="(key, val) in model_def">{{key}} : {{session[key]}}</p>
+        </div>
+        <a href="" ui-sref="sessions.edit({ id: session.id })">Edit</a>
+        <a href="" ng-click="remove(session)">Delete</a>
+    </li>
+</ul>
+<div ng-show="sessions.length === 0">Looks like you haven't added any sessions yet?</div>
+<a ng-hide="adding" ui-sref="sessions.add">Add A New Session</a>

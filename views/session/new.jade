@@ -1,0 +1,17 @@
+//
+   Created by root on 3/5/15.
+extends ../layout
+
+block body
+  #main-session-container(ng-app="SignupModule" ng-controller="SignupController" ng-cloak)
+    .container-fluid
+      .col-md-3.sign-session
+        h2 User Authentication
+        form.form-signin(action="session/create" method="POST")
+          .form-group
+            input(class="form-control" placeholder="Email" name="email" type="text")
+          .form-group
+            input(class="form-control" placeholder="Password" name="password" type="password")
+          .form-group
+            input.btn.btn-default(type="submit" value="Sign in")
+            input(type="hidden" name="_csrf" value="#{_csrf}")

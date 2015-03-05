@@ -1,0 +1,31 @@
+//
+   Created by root on 3/5/15.
+
+extends ../layout
+block body
+  #main-user-container
+    .container-fluid
+      .container
+        .col-md-6.edit-form
+          #messages
+          form.form-edit(name="signup", action="/user/update/#{user.id}", method="POST")#edit-form-account
+            h2.form-edit-heading Edit account
+            .row
+              .control-group.form-group.col-md-12
+                label Your full name
+                input.form-control(type='text', placeholder='Nikola Tesla', name='name', value='#{user.name}', required)
+              .control-group.form-group.col-md-12
+                label Your Username
+                input.form-control(type='text', placeholder='nikola', name='username', value='#{user.username}', required)
+              .control-group.form-group.col-md-12
+                label Your email address
+                input.form-control(type='email', placeholder='nikola@tesla.com', name='email', value='#{user.email}', required)
+              .control-group.form-group.col-md-12
+                button.btn.btn-primary.btn-lg.btn-block(type='submit')
+                  span Submit
+                  span.overlord-loading-spinner.fa.fa-spinner
+                  //span Preparing your new account...
+                input(type="hidden" name="_csrf" value="#{_csrf}")
+        .container
+          footer.footer.pull-right
+            .footer Aprimaface
