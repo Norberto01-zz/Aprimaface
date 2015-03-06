@@ -5,14 +5,22 @@ extends ../layout
 block body
   #main-user-container
     .container
-      h3 user Administration
+      h3 User Administration
       table.table
         thead
+          tr
+            td
+              a.btn.btn-sm.btn-toolbar(href="/user/new") New Account
           tr
             th CODE
             th Name
             th Username
             th Email
+            th
+            th Actions
+            th
+          tr
+            br
         tbody
           each user in users
             tr.show-item
@@ -30,4 +38,7 @@ block body
                 input.btn.btn-sm.btn-danger(type="submit" value="Delete")
                 input(type="hidden" name="method" value="delete")
                 input(type="hidden" name="_csrf" value="#{_csrf}")
-
+        tfoot
+          tr
+            td
+              a.btn.btn-sm.btn-toolbar(href="/user/new") New Account
